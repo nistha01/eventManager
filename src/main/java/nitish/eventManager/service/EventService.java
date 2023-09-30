@@ -33,6 +33,7 @@ public class EventService {
             ev.setStartTime(event.getStartTime());
             ev.setEndTime(event.getEndTime());
             ev.setEventId(event.getEventId());
+            iEventRepo.save(ev);
             return "Event details updated";
         }
         return "invalid Event Id";
